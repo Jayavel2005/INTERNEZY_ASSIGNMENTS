@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 1</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+</head>
+
+<body>
+    <h1 class="text-6xl text-center bg-red-500 p-4 font-sans">Heading level 1</h1>
+    <h2 class="text-5xl text-center bg-blue-400 p-4 font-mono">Heading level 2</h2>
+    <h3 class="text-4xl text-center bg-purple-300 p-4 font-serif">Heading level 3</h3>
+    <h4 class="text-3xl text-center bg-cyan-500 p-4 font-[Arial]">Heading level 4</h4>
+    <h5 class="text-2xl text-center bg-lime-500 p-4">Heading level 5</h5>
+    <h6 class="text-xl text-center bg-emerald-500 p-4">Heading level 6</h6>
+
+    <div class="flex py-10">
+        <button
+            class="bg-violet-500 hover:bg-violet-700 hover:outline-2 mx-auto py-2 px-5 text-white font-bold rounded-3xl hover:outline-offset-2 hover:outline-violet-500 "
+            onclick="show()">Click Me</button>
+    </div>
+
+    <div class="flex flex-wrap">
+        <img src="https://wallpapercave.com/wp/wp7981056.jpg" alt="image_one" class="w-100 h-auto mb-2 p-10">
+        <img src="https://th.bing.com/th/id/OIP.R0i85FnEuavAezjzb0O6RQHaFG?rs=1&pid=ImgDetMainalt="
+            class="w-100 h-auto p-10 object-cover">
+            <img src="https://wallpapercave.com/wp/wp7981056.jpg" alt="image_one" class="w-100 h-auto mb-2 p-10">
+        <img src="https://th.bing.com/th/id/OIP.R0i85FnEuavAezjzb0O6RQHaFG?rs=1&pid=ImgDetMainalt="
+            class="w-100 h-auto p-10 object-cover">
+    </div>
+
+    <script>
+        const show = () => {
+            let a = 10;
+            let b = 20;
+            let c = 30;
+            let d = 40;
+            let e = 50;
+            let result = a + b + c + d + e;
+            alert(`Addition of five number: ${result}`);
+            alert(`After subtracting 40 : ${result = result - 40}`);
+            alert(`Multiply with 30: ${result = result * 30}`);
+        }
+    </script>
+
+</body>
+
+</html>
