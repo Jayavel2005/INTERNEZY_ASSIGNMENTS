@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google</title>
+    <link type="image/png" sizes="32x32" rel="icon" href="./assests/icons8-google-32.png">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+</head>
+
+<body style="background-color: #202124;">
+    <div class="w-full h-screen">
+        <div class="flex justify-end gap-5 py-5 px-2 items-center">
+            <p class="text-white">Gmail</p>
+            <p class="text-white">Images</p>
+            <div class="dots h-[25px] w-[25px] flex gap-x-1 flex-wrap  ">
+                <div class="w-1 h-1 bg-white rounded-lg"></div>
+                <div class="w-1 h-1 bg-white rounded-lg"></div>
+                <div class="w-1 h-1 bg-white rounded-lg"></div>
+                <div class="w-1 h-1 bg-white rounded-lg"></div>
+                <div class="w-1 h-1 bg-white rounded-lg"></div>
+                <div class="w-1 h-1 bg-white rounded-lg"></div>
+                <div class="w-1 h-1 bg-white rounded-lg"></div>
+                <div class="w-1 h-1 bg-white rounded-lg"></div>
+                <div class="w-1 h-1 bg-white rounded-lg"></div>
+            </div>
+            <img src="https://lh3.googleusercontent.com/a/ACg8ocJPWxmRrQPRhb9GAKZ8NXqESkjDST_eZT5yjSaLxcxYmzWMaInG=s360-c-no"
+                alt="profile" class="rounded-2xl w-8">
+        </div>
+        <div class="search flex justify-center items-center mt-10 flex-col">
+            <h1 class="text-8xl mt-3 text-white text-center">Google</h1>
+            <div class="searchBox bg-white mt-15 w-150  rounded-3xl">
+                <input type="text"
+                    class="caret-pink-500  outline-none w-150 h-fit p-3 bg-gray-400 hover:bg-gray-500 rounded-3xl js-searchBar">
+            </div>
+            <div class="button mt-10 flex gap-x-5 ">
+                <button class="text-white bg-gray-400 p-2 rounded-lg cursor-pointer js-search">Google Search</button>
+                <button class="text-white bg-gray-400 p-2 rounded-lg cursor-pointer">அதிர்ஷ்டம் என் பக்கம் </button>
+            </div>
+            <p class="mt-7 text-white text-xs">Google இதில் வழங்குகிறது: &nbsp;
+                <a href="#" class="text-blue-300 hover:underline">English</a> &nbsp;
+                <a href="#" class="text-blue-300 hover:underline">हिन्दी</a> &nbsp;
+                <a href="#" class="text-blue-300 hover:underline">বাংলা</a> &nbsp;
+                <a href="#" class="text-blue-300 hover:underline">తెలుగు</a> &nbsp;
+                <a href="#" class="text-blue-300 hover:underline">मराठी</a> &nbsp;
+                <a href="#" class="text-blue-300 hover:underline">ગુજરાતી</a> &nbsp;
+                <a href="#" class="text-blue-300 hover:underline">ಕನ್ನಡ</a> &nbsp;
+                <a href="#" class="text-blue-300 hover:underline">മലയാളം</a> &nbsp;
+                <a href="#" class="text-blue-300 hover:underline">ਪੰਜਾਬੀ</a>
+            </p>
+        </div>
+    </div>
+    <script>
+        const searchBar = document.querySelector(".js-searchBar");
+        const searchBtn = document.querySelector(".js-search");
+
+        searchBtn.addEventListener("click", () => {
+            if (searchBar.value === "") {
+
+                return;
+            }
+            window.open(`https://www.google.com/search?q=${searchBar.value}`, "_self");
+
+            searchBar.value = "";
+            // console.log(searchBar.value);
+
+        });
+        searchBar.addEventListener("keypress", (event) => {
+            if (event.key === "Enter")
+                searchBtn.click();
+        });
+        
+    </script>
+</body>
+
+</html>

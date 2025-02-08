@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            width: 300px;
+            height: auto;
+        }
+        .images{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            row-gap: 15px;
+        }
+        .currentImageContainer{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 250px;
+            border: 4px solid cyan;
+            margin: 10px 0px;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="currentImageContainer">
+        <img src="https://th.bing.com/th/id/OIP.FEqv7YYMNjXtrVYqo7HHzAHaE7?rs=1&pid=ImgDetMain" alt="" class="currentImage">
+    </div>
+    <div class="images">
+        <img src="https://th.bing.com/th/id/OIP.FEqv7YYMNjXtrVYqo7HHzAHaE7?rs=1&pid=ImgDetMain" class="img" />
+
+        <img src="https://nofilmschool.com/sites/default/files/styles/article_wide/public/bigstock.jpg?itok=Snv4I36d" class="img" />
+
+        <img src="https://www.bing.com/th?id=OIP.E4IJcali_762Oo_vNhhbFgHaEK&w=201&h=106&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2" class="img" />
+
+        <img src="https://www.bing.com/th?id=OIP.wg4R0mAD1_DQAII9hCM-8AHaDk&w=182&h=100&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2" class="img" />
+        <!-- <img src="https://th.bing.com/th/id/OIP.FEqv7YYMNjXtrVYqo7HHzAHaE7?rs=1&pid=ImgDetMain" class="img" />
+
+        <img src="https://nofilmschool.com/sites/default/files/styles/article_wide/public/bigstock.jpg?itok=Snv4I36d" class="img" />
+
+        <img src="https://www.bing.com/th?id=OIP.E4IJcali_762Oo_vNhhbFgHaEK&w=201&h=106&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2" class="img" />
+
+        <img src="https://www.bing.com/th?id=OIP.wg4R0mAD1_DQAII9hCM-8AHaDk&w=182&h=100&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2" class="img" /> -->
+    </div>
+
+    <script>
+        const images = document.querySelectorAll(".images img");
+        const currentImage = document.querySelector(".currentImage");
+        const opacity = 0.6;
+        let prevImage = images[0]; // Set the first image as the initial active one
+
+        // Highlight the first image initially
+        prevImage.style.borderRadius = "10px";
+        prevImage.style.opacity = opacity;
+
+        images.forEach((image) => {
+            image.addEventListener("click", () => {
+                // Reset the previous image
+                if (prevImage) {
+                    prevImage.style.borderRadius = "0px";
+                    prevImage.style.opacity = "1";
+                }
+
+                // Apply active styles to the clicked image
+                image.style.borderRadius = "10px";
+                image.style.opacity = opacity;
+
+                // Update the current image display
+                currentImage.src = image.src;
+
+                // Set the current image as the previous for the next click
+                prevImage = image;
+            });
+        });
+    </script>
+</body>
+
+</html>
