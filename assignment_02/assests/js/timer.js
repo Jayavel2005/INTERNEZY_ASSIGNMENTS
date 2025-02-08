@@ -12,7 +12,7 @@ const showTime = () => {
     let getMinute = date.getMinutes();
     let getSecond = date.getSeconds();
     
-    if (getHour >= 5 && getHour < 12) {
+    if (getHour >= 1 && getHour < 12) {
         greet.innerText = "🌅 Good Morning!";
     } else if (getHour >= 12 && getHour < 17) {
         greet.innerText = "🌞 Good Afternoon!";
