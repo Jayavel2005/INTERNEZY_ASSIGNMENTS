@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <title>Countdown</title>
+</head>
+
+<body>
+    <div class="bg-lime-400 w-full h-screen">
+        <div class="flex justify-center items-center p-25 flex-col">
+            <h1 class="text-7xl">New Year Countdown</h1>
+
+            <div>
+                <p class="text-center my-5 text-7xl greet text-white"></p>
+                <p class="text-center text-6xl my-5"><span class="hour"></span> : <span class="minute"></span> : <span
+                        class="seconds"></span><span class="session">&nbsp;</span></p>
+                <p class="text-center text-6xl  my-5">
+                    <span class="js-date"></span>&nbsp;/
+                    <span class="js-month"></span>&nbsp;/
+                    <span class="js-year"></span>
+                </p>
+                <p class="countdown text-5xl text-center  text-white mt-20">
+                </p>
+            </div>
+
+
+        </div>
+    </div>
+    <script src="./assests/js/timer.js"></script>
+    <script src="./assests/js/countdown.js"></script>
+</body>
+
+</html>
